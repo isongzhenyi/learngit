@@ -1,0 +1,6 @@
+package com.honliv.hp.it.aop;
+
+public interface ArithmeticCalculator
+{
+
+}

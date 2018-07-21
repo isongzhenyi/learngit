@@ -1,0 +1,7 @@
+package com.honli.hp;
+
+public class Car
+{
+  price integer;
+  brand 
+}

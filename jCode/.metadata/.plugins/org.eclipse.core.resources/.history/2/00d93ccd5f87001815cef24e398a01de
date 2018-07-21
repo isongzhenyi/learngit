@@ -1,0 +1,14 @@
+package com.honli.hp;
+
+public class Main
+{
+
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stub
+		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("beans.xml");
+	    Car mycar = (Car) ctx.getBean("mycar");
+	    System.out.println(mycar);
+	}
+
+}

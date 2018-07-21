@@ -1,0 +1,8 @@
+package com.honli.hp;
+
+public class Car
+{
+  float price ;
+  String brand ;
+    
+}
