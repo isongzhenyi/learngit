@@ -104,4 +104,24 @@
 		<item value="org.springsource.sts.package:3.9.5.201807031753-RELEASE-e48"/>
 		<item value="org.springsource.sts:3.9.5.201807031753-RELEASE"/>
 	</list>
+	<section name="org.springsource.ide.eclipse.commons.quicksearch.ui.QuickSearchDialog.DIALOG_SETTINGS">
+		<item value="true" key="CASE_SENSITIVE"/>
+		<item value="" key="LAST_QUERY"/>
+		<list key="SASH_WEIGHTS">
+			<item value="833"/>
+			<item value="166"/>
+		</list>
+		<list key="COLUMN_WIDTHS">
+			<item value="40"/>
+			<item value="400"/>
+			<item value="114"/>
+		</list>
+		<section name="DialogBoundsSettings">
+			<item value="600" key="DIALOG_WIDTH"/>
+			<item value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
+			<item value="500" key="DIALOG_HEIGHT"/>
+			<item value="669" key="DIALOG_X_ORIGIN"/>
+			<item value="197" key="DIALOG_Y_ORIGIN"/>
+		</section>
+	</section>
 </section>

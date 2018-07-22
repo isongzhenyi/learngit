@@ -7,7 +7,7 @@ public class Main
 		// TODO Auto-generated method stub
 		FisterInterface one = new FirstClass();
 		System.out.println(one.functionOne(4, 6));
-  		((SecondInterface)one).close();
-		((SencodClass) one).close();
+// 		((SecondInterface)one).close();
+		((SencodClass)one).close();
 	}
 }
