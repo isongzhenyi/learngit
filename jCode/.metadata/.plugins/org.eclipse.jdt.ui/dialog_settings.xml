@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="11..1.0.000.0.0.0.0.0.0.0.0.0..00.0.0.0.0.0.0.0.0.0.0..00.0.0.0.0.0..00.0.0.0..00.0.0.0...00.0..00.00..0..000.0.0.0.0.0.0.0.0.0...00.0..0.." key="org.eclipse.jdt.uiformatter_page.preference_tree_expansion"/>
 	<item value="true" key="org.eclipse.jdt.ui.codeformatter.create_profile_dialog.open_edit"/>
-	<item value="804" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.sash_form_left_width"/>
-	<item value="1942" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.preferred_width"/>
-	<item value="1056" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.preferred_height"/>
+	<item value="3" key="TypeHierarchyViewPart.orientation"/>
 	<item value="-11" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.preferred_x"/>
 	<item value="false" key="ProjectSelectionDialog.show_all"/>
 	<item value="-11" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.preferred_y"/>
+	<item value="false" key="TypeHierarchyViewPart.linkeditors"/>
 	<item value="40" key="org.eclipse.jdt.ui.codeformatter.line_wrapping_tab_page.preview_line_width"/>
+	<item value="2" key="TypeHierarchyViewPart.hierarchyview"/>
+	<item value="11..1.0.000.0.0.0.0.0.0.0.0.0..00.0.0.0.0.0.0.0.0.0.0..00.0.0.0.0.0..00.0.0.0..00.0.0.0...00.0..00.00..0..000.0.0.0.0.0.0.0.0.0...00.0..0.." key="org.eclipse.jdt.uiformatter_page.preference_tree_expansion"/>
+	<item value="false" key="TypeHierarchyViewPart.qualifiednames"/>
+	<item value="804" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.sash_form_left_width"/>
+	<item value="1942" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.preferred_width"/>
+	<item value="1056" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.preferred_height"/>
 	<item value="558" key="org.eclipse.jdt.uiformatter_page.preference_scroll_position"/>
 	<item value="26" key="org.eclipse.jdt.uiformatter_page.last_focus_index"/>
 	<item value="1081" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.sash_form_rigth_width"/>
@@ -24,11 +28,11 @@
 		<item value="false" key="expanded0"/>
 	</section>
 	<section name="DialogBounds_SuperInterfaceSelectionDialog">
-		<item value="535" key="DIALOG_WIDTH"/>
-		<item value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
-		<item value="789" key="DIALOG_HEIGHT"/>
+		<item value="425" key="DIALOG_WIDTH"/>
+		<item value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
+		<item value="681" key="DIALOG_HEIGHT"/>
 		<item value="140" key="DIALOG_X_ORIGIN"/>
-		<item value="-93" key="DIALOG_Y_ORIGIN"/>
+		<item value="-15" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item value="2" key="layout"/>

@@ -7,4 +7,8 @@
 <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
 <fullyQualifiedTypeName name="org.springframework.context.ConfigurableApplicationContext"/>
 <fullyQualifiedTypeName name="org.springframework.beans.BeansException"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="com.honliv.hp.it.interfaceCheck.FisterInterface"/>
+<fullyQualifiedTypeName name="com.honliv.hp.it.interfaceCheck.FirstClass"/>
+<fullyQualifiedTypeName name="com.honliv.hp.it.interfaceCheck.SecondInterface"/>
 </qualifiedTypeNameHistroy>
