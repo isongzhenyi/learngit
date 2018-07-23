@@ -2,4 +2,5 @@
 <aop-reference-model>
 <aop-project name="MavenCheck"/>
 <aop-project name="javaCheck"/>
+<aop-project name="spring-restful-authorization"/>
 </aop-reference-model>

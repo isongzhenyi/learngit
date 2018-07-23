@@ -33,6 +33,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="E:\GitHub\spring-restful-authorization"/>
 			<item value="E:\code\jCode\SpringExample"/>
 		</list>
 		<list key="projectNameTemplate">
