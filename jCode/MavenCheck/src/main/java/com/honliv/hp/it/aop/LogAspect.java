@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class LogAspect
 {
-    @Before("execution(int com.honliv.hp.it.aop.ArithmeticCalculatorImpl.add(int, int ))")
+    @Before("execution( * com.honliv.hp.it.aop.ArithmeticCalculatorImpl.*(.. ))")
 	public void beforeFunction(JoinPoint joinPoint)
 	{
     	String funtionName = joinPoint.getSignature().getName();
