@@ -1,5 +1,7 @@
 package com.honliv.hp.it.aop;
 
+
+ 
 import java.util.Arrays;
 import java.util.List;
 
@@ -17,6 +19,6 @@ public class LogAspect
 	{
     	String funtionName = joinPoint.getSignature().getName();
     	List<Object> parms = Arrays.asList(  joinPoint.getArgs());
-		System.out.println("Before Function " + funtionName+" parms :"+parms);
+		System.out.println("Before Function " + funtionName);
 	}
 }
