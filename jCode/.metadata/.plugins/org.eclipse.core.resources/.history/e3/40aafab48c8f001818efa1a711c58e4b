@@ -1,0 +1,12 @@
+package com.honliv.i;
+
+import org.junit.Test;
+
+public class TestMethods
+{
+	@Test
+	public void test()
+	{
+		System.out.println("hello world");
+	}
+}

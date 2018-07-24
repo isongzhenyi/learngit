@@ -1,0 +1,10 @@
+package com.honliv.i;
+import org.junit.*;
+public class Test
+{
+	@Test
+	public void name()
+	{
+		System.out.println("this is my first test");
+	}
+}

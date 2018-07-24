@@ -1,7 +1,4 @@
-AbstractTextEditor.Color.Background=16,30,21
-AbstractTextEditor.Color.Background.SystemDefault=false
-AbstractTextEditor.Color.SelectionBackground.SystemDefault=false
-AbstractTextEditor.Color.SelectionForeground.SystemDefault=false
+AbstractTextEditor.Color.Background=36,36,36
 adviceIndication=false
 ajdtErrorIndication=false
 ajdtWarningIndication=false

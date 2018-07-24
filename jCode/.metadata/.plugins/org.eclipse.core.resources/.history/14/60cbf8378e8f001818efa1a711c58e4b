@@ -1,0 +1,7 @@
+package com.honliv.i;
+
+public class TestClass
+{
+  String myName ;
+  short  myAge£»
+}

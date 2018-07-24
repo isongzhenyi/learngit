@@ -1,0 +1,11 @@
+package com.honliv.i;
+ 
+
+class Test
+{
+    @org.junit.Test
+    public void test ()
+    {
+    	System.out.println("this is my first test");
+    }
+}
