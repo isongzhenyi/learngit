@@ -1,0 +1,2 @@
+-- aop的xml配置示例
+applicationContext-xml.xml
