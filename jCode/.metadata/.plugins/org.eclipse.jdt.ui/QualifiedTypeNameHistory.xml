@@ -20,4 +20,6 @@
 <fullyQualifiedTypeName name="org.junit.Test"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="com.honliv.i.TestClass"/>
+<fullyQualifiedTypeName name="org.apache.log4j.Logger"/>
+<fullyQualifiedTypeName name="com.honliv.hp.MavenCheck.Car"/>
 </qualifiedTypeNameHistroy>

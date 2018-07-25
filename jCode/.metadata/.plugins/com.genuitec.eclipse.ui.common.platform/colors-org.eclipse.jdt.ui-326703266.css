@@ -16,12 +16,12 @@
 
 
 BulletListBlock > StyledText {
-background-color: #203c2a;
-color: #a5cfb4;
+background-color: #394146;
+color: #b3bbc1;
 }
 
 FormatterPreferenceSectionComposite {
-background-color:#294c35;
-color:#e8f3ec;
-swt-titlebar-color: #bddbc7;
+background-color:#49535a;
+color:#ebedef;
+swt-titlebar-color: #c7cdd1;
 }
