@@ -1,0 +1,22 @@
+package com.honli.hp.it.proxy;
+
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+
+public class ProxyObjectDynamic implements InvocationHandler
+{
+	private Object target;
+
+	public ProxyObjectDynamic(Object target)
+	{
+		this.target = target;
+	}
+
+	@Override
+	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable
+	{
+		// TODO Auto-generated method stub
+		System.out.println("此处写增加代码");
+		return method.invoke(target, args);
+	}
+}
