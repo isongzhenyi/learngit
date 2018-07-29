@@ -29,4 +29,7 @@
 <fullyQualifiedTypeName name="java.lang.annotation.Target"/>
 <fullyQualifiedTypeName name="com.honli.hp.it.proxy.ProxyObjectDynamic"/>
 <fullyQualifiedTypeName name="org.junit.Test"/>
+<fullyQualifiedTypeName name="net.sf.cglib.proxy.Enhancer"/>
+<fullyQualifiedTypeName name="com.honliv.hp.it.proxy.AccountServer"/>
+<fullyQualifiedTypeName name="com.honliv.hp.it.proxy.AccountServerCglibProxy"/>
 </qualifiedTypeNameHistroy>

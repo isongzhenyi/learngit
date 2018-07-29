@@ -28,8 +28,7 @@ public class AppTest
 	 * 仔细体会这个过程，其实有点类似我们在静态代理中提到的方案一，生成了一个包含我们扩展功能，
 	 * 持有RealObject引用，实现Action接口的代理实例Proxy。只不过这个Proxy不是我们自己写的，而是java帮我们生成的，
 	 * 有没有一点动态的味道。 让我们再回顾一下代理三要素：真实对象：RealObject，代理接口：Action，代理实例：Proxy
-	 * 上面的代码实含义也就是，输入 RealObject、Action，返回一个Proxy。妥妥的代理模式。 
-	 * 综上，动态生成+代理模式，也就是动态代理。
+	 * 上面的代码实含义也就是，输入 RealObject、Action，返回一个Proxy。妥妥的代理模式。 综上，动态生成+代理模式，也就是动态代理。
 	 * 有一篇文章，推薦看看 https://blog.csdn.net/wangqyoho/article/details/77584832
 	 */
 	public void testDynamicProxy()
@@ -40,5 +39,14 @@ public class AppTest
 				tar.getClass().getInterfaces(), new ExtensionObject(tar));
 		// 此时执行的内容是增强过的内容
 		proxyOjbect.doSomeThing();
+	}
+
+	@Test
+	public void testCglibProxy()
+	{
+		AccountServer target = new AccountServer();
+		AccountServer accountServer = new AccountServerCglibProxy(target).createProxy();
+
+		accountServer.getBalance();
 	}
 }

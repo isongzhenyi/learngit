@@ -1,0 +1,39 @@
+package com.honliv.hp.it.proxy;
+
+import java.lang.reflect.Method;
+
+import net.sf.cglib.proxy.Enhancer;
+import net.sf.cglib.proxy.MethodInterceptor;
+import net.sf.cglib.proxy.MethodProxy;
+
+public class AccountServerCglibProxy implements MethodInterceptor
+{
+
+	private AccountServer target;
+
+	public AccountServerCglibProxy(AccountServer target)
+	{
+		this.target = target;
+	}
+
+	AccountServer createProxy()
+	{
+		Enhancer enhancer = new Enhancer();
+		// 设置需要创建子类的类
+		enhancer.setSuperclass(target.getClass());
+		enhancer.setCallback(this);
+		// 通过字节码技术动态创建子类实例
+		return (AccountServer)enhancer.create();
+	}
+
+	public Object intercept(Object arg0, Method arg1, Object[] arg2, MethodProxy arg3) throws Throwable
+	{
+		// TODO Auto-generated method stub
+		System.out.println("前置代理");
+		// 通过代理类调用父类中的方法
+		Object result = arg1.invoke(target, arg2);
+		System.out.println("后置代理");
+		return result;
+	}
+
+}
