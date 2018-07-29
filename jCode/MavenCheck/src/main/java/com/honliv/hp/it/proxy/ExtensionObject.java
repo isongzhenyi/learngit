@@ -1,4 +1,4 @@
-package com.honli.hp.it.proxy;
+package com.honliv.hp.it.proxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -17,11 +17,10 @@ public class ExtensionObject implements InvocationHandler
 		this.target = target;
 	}
 
-	@Override
 	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable
 	{
 		// TODO Auto-generated method stub
-/* 		增强功能写在这里*/
+        /* 增强功能写在这里*/
 		System.out.println("此处写增加代码");
 		return method.invoke(target, args);
 	}

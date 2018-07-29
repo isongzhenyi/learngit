@@ -1,4 +1,4 @@
-package com.honli.hp.it.proxy;
+package com.honliv.hp.it.proxy;
 
 public interface ProxyInterface
 {

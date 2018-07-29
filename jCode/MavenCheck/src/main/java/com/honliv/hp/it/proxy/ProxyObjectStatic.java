@@ -1,4 +1,4 @@
-package com.honli.hp.it.proxy;
+package com.honliv.hp.it.proxy;
 
 public class ProxyObjectStatic implements ProxyInterface
 {
@@ -9,7 +9,6 @@ public class ProxyObjectStatic implements ProxyInterface
 		this.proxyInterfaceImpl = proxyInterfaceImpl ;
 	}
 
-	@Override
 	public void doSomeThing()
 	{
 		// TODO Auto-generated method stub
@@ -18,7 +17,6 @@ public class ProxyObjectStatic implements ProxyInterface
 		System.out.println("做一些事情-后");
 	}
 
-	@Override
 	public void doSomeThing2()
 	{
 		// TODO Auto-generated method stub
