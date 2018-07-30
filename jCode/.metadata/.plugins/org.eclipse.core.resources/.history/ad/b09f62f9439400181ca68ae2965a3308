@@ -1,0 +1,32 @@
+package com.honliv.hp.it.template;
+
+import javax.security.auth.login.LoginContext;
+
+import org.springframework.context.PayloadApplicationEvent;
+
+public abstract class ShoppingService
+{
+
+	public void shopping()
+	{
+		login();
+		choose();
+		pay();
+	}
+
+	public final String login()
+	{		
+		// TODO Auto-generated method stub
+		System.out.println("用户成功登录")
+		return "用户成功登陆";
+	}
+
+	public abstract void choose();
+
+	public void pay()
+	{
+		// TODO Auto-generated method stub
+        
+	}
+
+}

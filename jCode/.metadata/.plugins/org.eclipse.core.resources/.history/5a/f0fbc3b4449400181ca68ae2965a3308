@@ -1,0 +1,13 @@
+package com.honliv.hp.it.template;
+
+public class CustomerShopping extends ShoppingService
+{
+
+	@Override
+	public void choose()
+	{
+		// TODO Auto-generated method stub
+
+	}
+
+}
