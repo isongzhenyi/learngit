@@ -1,0 +1,11 @@
+package com.honliv.hp.it.template;
+
+public class AppTest
+{
+	public void test()
+	{
+		CustomerShopping customerShopping =  new CustomerShopping();
+		customerShopping.shopping();
+	}
+	
+}

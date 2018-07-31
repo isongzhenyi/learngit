@@ -17,7 +17,6 @@
 <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="com.honliv.i.TestClass"/>
 <fullyQualifiedTypeName name="org.apache.log4j.Logger"/>
 <fullyQualifiedTypeName name="com.honliv.hp.MavenCheck.Car"/>
@@ -28,8 +27,12 @@
 <fullyQualifiedTypeName name="java.lang.reflect.Proxy"/>
 <fullyQualifiedTypeName name="java.lang.annotation.Target"/>
 <fullyQualifiedTypeName name="com.honli.hp.it.proxy.ProxyObjectDynamic"/>
-<fullyQualifiedTypeName name="org.junit.Test"/>
 <fullyQualifiedTypeName name="net.sf.cglib.proxy.Enhancer"/>
 <fullyQualifiedTypeName name="com.honliv.hp.it.proxy.AccountServer"/>
 <fullyQualifiedTypeName name="com.honliv.hp.it.proxy.AccountServerCglibProxy"/>
+<fullyQualifiedTypeName name="javax.security.auth.login.LoginContext"/>
+<fullyQualifiedTypeName name="org.springframework.context.PayloadApplicationEvent"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="com.honliv.hp.it.template.CustomerShopping"/>
+<fullyQualifiedTypeName name="org.junit.Test"/>
 </qualifiedTypeNameHistroy>
