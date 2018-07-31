@@ -4,11 +4,11 @@ public class AccountServer
 {
 	public void transfer()
 	{
-		System.out.println("转账操作");
+		System.out.println("未增强操作：转账操作*****************");
 	}
 
 	public void getBalance()
 	{
-		System.out.println("*****************获取余额*****************");
+		System.out.println("未增强操作：获取余额*****************");
 	}
 }

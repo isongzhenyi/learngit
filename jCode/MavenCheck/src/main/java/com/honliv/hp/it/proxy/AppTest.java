@@ -20,7 +20,7 @@ public class AppTest
 		ProxyInterface proxyOjbect = new ProxyObjectStatic(targe);
 
 		proxyOjbect.doSomeThing();
-		proxyOjbect.doSomeThing2();
+//		proxyOjbect.doSomeThing2();
 	}
 
 	@Test
@@ -48,5 +48,6 @@ public class AppTest
 		AccountServer accountServer = new AccountServerCglibProxy(target).createProxy();
 
 		accountServer.getBalance();
+		//accountServer.transfer();
 	}
 }
