@@ -1,0 +1,6 @@
+package com.honliv.hp.it.jdbc.transaction.Dao;
+
+public class Stock
+{
+
+}

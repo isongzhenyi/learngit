@@ -1,0 +1,8 @@
+package com.honliv.hp.it.jdbc.transaction.Dao;
+
+public class Stock
+{
+  private Integer id ;
+  private String sname;
+  private Integer account ;
+}

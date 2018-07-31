@@ -1,7 +1,6 @@
 package com.honliv.hp.it.proxy;
 
-import java.lang.reflect.Method;
-import java.time.LocalTime;
+import java.lang.reflect.Method; 
 
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
@@ -25,7 +24,7 @@ public class AccountServerCglibProxy implements MethodInterceptor
 		enhancer.setSuperclass(target.getClass());
 		enhancer.setCallback(this);
 		// 通过字节码技术动态创建子类实例
-		return (AccountServer)enhancer.create();
+		return (AccountServer) enhancer.create();
 	}
 
 	@Override
@@ -34,9 +33,9 @@ public class AccountServerCglibProxy implements MethodInterceptor
 	public Object intercept(Object obj, Method method, Object[] args, MethodProxy proxy) throws Throwable
 	{
 		// TODO Auto-generated method stub
-//		System.out.println( LocalTime.now() + "：前置代理***************");		
-		
-		System.out.println( "前置代理***************");
+  	    System.out.println( java.time.LocalTime.now() + "：前置代理***************");		
+
+		System.out.println("前置代理***************");
 		// 通过代理类调用父类中的方法
 		Object result = method.invoke(target, args);
 		System.out.println("后置代理***************");
