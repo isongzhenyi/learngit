@@ -5,7 +5,6 @@
 <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
 <fullyQualifiedTypeName name="org.springframework.context.ConfigurableApplicationContext"/>
 <fullyQualifiedTypeName name="org.springframework.beans.BeansException"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="com.honliv.hp.it.interfaceCheck.FisterInterface"/>
 <fullyQualifiedTypeName name="com.honliv.hp.it.interfaceCheck.FirstClass"/>
 <fullyQualifiedTypeName name="com.honliv.hp.it.interfaceCheck.SecondInterface"/>
@@ -32,7 +31,9 @@
 <fullyQualifiedTypeName name="com.honliv.hp.it.proxy.AccountServerCglibProxy"/>
 <fullyQualifiedTypeName name="javax.security.auth.login.LoginContext"/>
 <fullyQualifiedTypeName name="org.springframework.context.PayloadApplicationEvent"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="com.honliv.hp.it.template.CustomerShopping"/>
 <fullyQualifiedTypeName name="org.junit.Test"/>
+<fullyQualifiedTypeName name="java.lang.InternalError"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
 </qualifiedTypeNameHistroy>

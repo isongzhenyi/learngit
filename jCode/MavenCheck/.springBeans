@@ -9,6 +9,7 @@
 	<configs>
 		<config>src/main/java/beans.xml</config>
 		<config>src/main/java/aspectXml.xml</config>
+		<config>src/main/java/AopXml.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

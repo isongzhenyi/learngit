@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
-<aop-project name="MavenCheck">
-<aspect-definition advice-class-name="com.honliv.hp.it.aop.LogAspect" advice-method-name="beforeFunction(org.aspectj.lang.JoinPoint)" advice-type="BEFORE" aspect-end-line-number="18" aspect-name="logAspect" aspect-start-line-number="18" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/MavenCheck/src/main/java/beans.xml" pointcut-expression="execution( * com.honliv.hp.it.aop.ArithmeticCalculatorImpl.*(.. ))" proxy-target-class="false">
-<aop-reference advice-type="BEFORE" bean="1:BeansModel|2:MavenCheck|3:src/main/java/beans.xml|7:beans:9|8:arithmeticCalculator:9" bean-file="/MavenCheck/src/main/java/beans.xml" bean-start-line="9" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/MavenCheck/src/main/java/beans.xml" source="=MavenCheck/src\/main\/java&lt;com.honliv.hp.it.aop{LogAspect.java[LogAspect~beforeFunction~QJoinPoint;" source-start-line="16" target="=MavenCheck/src\/main\/java&lt;com.honliv.hp.it.aop{ArithmeticCalculatorImpl.java[ArithmeticCalculatorImpl~sub~I~I" target-start-line="17"/>
-<aop-reference advice-type="BEFORE" bean="1:BeansModel|2:MavenCheck|3:src/main/java/beans.xml|7:beans:9|8:arithmeticCalculator:9" bean-file="/MavenCheck/src/main/java/beans.xml" bean-start-line="9" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/MavenCheck/src/main/java/beans.xml" source="=MavenCheck/src\/main\/java&lt;com.honliv.hp.it.aop{LogAspect.java[LogAspect~beforeFunction~QJoinPoint;" source-start-line="16" target="=MavenCheck/src\/main\/java&lt;com.honliv.hp.it.aop{ArithmeticCalculatorImpl.java[ArithmeticCalculatorImpl~div~I~I" target-start-line="24"/>
-<aop-reference advice-type="BEFORE" bean="1:BeansModel|2:MavenCheck|3:src/main/java/beans.xml|7:beans:9|8:arithmeticCalculator:9" bean-file="/MavenCheck/src/main/java/beans.xml" bean-start-line="9" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/MavenCheck/src/main/java/beans.xml" source="=MavenCheck/src\/main\/java&lt;com.honliv.hp.it.aop{LogAspect.java[LogAspect~beforeFunction~QJoinPoint;" source-start-line="16" target="=MavenCheck/src\/main\/java&lt;com.honliv.hp.it.aop{ArithmeticCalculatorImpl.java[ArithmeticCalculatorImpl~add~I~I" target-start-line="10"/>
-</aspect-definition>
-</aop-project>
+<aop-project name="MavenCheck"/>
 <aop-project name="javaCheck"/>
 <aop-project name="spring-restful-authorization"/>
 </aop-reference-model>

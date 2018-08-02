@@ -104,6 +104,8 @@
 		<item value="org.springsource.sts.package:3.9.5.201807031753-RELEASE-e48"/>
 		<item value="org.springsource.sts:3.9.5.201807031753-RELEASE"/>
 	</list>
+	<section name="NewWizardAction">
+	</section>
 	<section name="org.springsource.ide.eclipse.commons.quicksearch.ui.QuickSearchDialog.DIALOG_SETTINGS">
 		<item value="true" key="CASE_SENSITIVE"/>
 		<item value="" key="LAST_QUERY"/>
