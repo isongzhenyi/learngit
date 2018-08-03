@@ -32,8 +32,11 @@
 <fullyQualifiedTypeName name="javax.security.auth.login.LoginContext"/>
 <fullyQualifiedTypeName name="org.springframework.context.PayloadApplicationEvent"/>
 <fullyQualifiedTypeName name="com.honliv.hp.it.template.CustomerShopping"/>
-<fullyQualifiedTypeName name="org.junit.Test"/>
 <fullyQualifiedTypeName name="java.lang.InternalError"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="org.junit.Test"/>
+<fullyQualifiedTypeName name="com.honliv.hp.it.aop.ArithmeticCalculatorImplXml"/>
+<fullyQualifiedTypeName name="com.honliv.hp.it.aop.LogAspectXml"/>
+<fullyQualifiedTypeName name="org.springframework.aop.framework.ProxyFactory"/>
 </qualifiedTypeNameHistroy>

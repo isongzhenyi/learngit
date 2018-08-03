@@ -5838,3 +5838,53 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact asm:asm:jar:j
 2018-08-03 06:19:54,466 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\code\jCode\MavenCheck\src\main\resources
 2018-08-03 06:19:54,466 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2018-08-03 06:19:54,466 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\code\jCode\MavenCheck\src\test\resources
+2018-08-03 20:20:25,578 [Worker-11: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-03 20:20:25,597 [Worker-11: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\code\jCode\MavenCheck\src\main\resources
+2018-08-03 20:20:25,599 [Worker-11: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-03 20:20:25,599 [Worker-11: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\code\jCode\MavenCheck\src\test\resources
+2018-08-03 20:20:26,663 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-03 20:20:26,664 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\code\jCode\MavenCheck\src\main\resources
+2018-08-03 20:20:26,668 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-03 20:20:26,669 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\code\jCode\MavenCheck\src\test\resources
+2018-08-03 20:20:27,834 [Worker-1: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-03 20:20:27,851 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-08-03 20:20:27,862 [Worker-1: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-03 20:20:27,867 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\code\jCode\SpringExample\src\test\resources
+2018-08-03 20:20:30,487 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-03 20:20:30,488 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-08-03 20:20:30,502 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 40 resources
+2018-08-03 20:20:31,732 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-03 20:20:31,732 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GitHub\spring-restful-authorization\src\test\resources
+2018-08-03 20:20:52,074 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-03 20:20:52,076 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\code\jCode\MavenCheck\src\main\resources
+2018-08-03 20:20:52,077 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-03 20:20:52,077 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\code\jCode\MavenCheck\src\test\resources
+2018-08-03 20:26:54,036 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-03 20:26:54,040 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\code\jCode\MavenCheck\src\main\resources
+2018-08-03 20:26:54,042 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-03 20:26:54,043 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\code\jCode\MavenCheck\src\test\resources
+2018-08-03 20:26:55,084 [Worker-10: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-03 20:26:55,098 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-08-03 20:26:55,109 [Worker-10: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2018-08-03 20:26:55,114 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\code\jCode\SpringExample\src\test\resources
+2018-08-03 20:26:55,651 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-03 20:26:55,651 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-08-03 20:26:55,658 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 40 resources
+2018-08-03 20:26:56,176 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-03 20:26:56,176 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GitHub\spring-restful-authorization\src\test\resources
+2018-08-03 20:49:49,111 [Worker-27: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-03 20:49:49,112 [Worker-27: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\code\jCode\MavenCheck\src\main\resources
+2018-08-03 20:49:49,114 [Worker-27: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-03 20:49:49,114 [Worker-27: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\code\jCode\MavenCheck\src\test\resources
+2018-08-03 20:52:39,746 [Worker-27: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-03 20:52:39,746 [Worker-27: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\code\jCode\MavenCheck\src\main\resources
+2018-08-03 20:52:39,748 [Worker-27: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-03 20:52:39,748 [Worker-27: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\code\jCode\MavenCheck\src\test\resources
+2018-08-03 20:54:49,966 [Worker-27: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-03 20:54:49,966 [Worker-27: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\code\jCode\MavenCheck\src\main\resources
+2018-08-03 20:54:49,967 [Worker-27: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-03 20:54:49,967 [Worker-27: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\code\jCode\MavenCheck\src\test\resources
+2018-08-03 21:00:09,004 [Worker-31: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-03 21:00:09,004 [Worker-31: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\code\jCode\MavenCheck\src\main\resources
+2018-08-03 21:00:09,006 [Worker-31: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-03 21:00:09,006 [Worker-31: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\code\jCode\MavenCheck\src\test\resources
