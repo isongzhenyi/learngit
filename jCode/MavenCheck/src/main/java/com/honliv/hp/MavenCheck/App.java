@@ -8,12 +8,12 @@ public class App
 {
 	public static void main(String[] args)   
 	{
-		@SuppressWarnings("resource")
 		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 		Car car = (Car) context.getBean("car");
 		System.out.println(car);
         Logger logger = Logger.getLogger(Car.class)   ;
         logger.info("this is my info");
         logger.info(car);
+        
 	}
 }

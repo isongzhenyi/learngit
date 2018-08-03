@@ -1,0 +1,21 @@
+-- 2018年8月3日
+在对spring实例化操作时，ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml")，
+会报警告 Resource leak: 'context' is never closed；对这种警告的处理方法总结如下：
+
+
+1.改变context 的作用域，提前初始化
+public class Test 
+{
+    private static ApplicationContext context;
+    public static void main(String[] args)
+	{
+        context = new ClassPathXmlApplicationContext("Beans.xml"); 
+    }
+}
+2.强制转换类型，使用close方法
+((ConfigurableApplicationContext)ctx).close();
+
+3.初始化时，使用带有close方法的子类
+ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");  
+
+-- 主题设置为 solarised dark
