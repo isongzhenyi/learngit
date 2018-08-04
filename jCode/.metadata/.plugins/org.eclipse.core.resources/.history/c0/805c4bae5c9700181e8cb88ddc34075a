@@ -42,7 +42,7 @@ public class Apptest
 
 		ArithmeticCalculatorImplXml proxy = (ArithmeticCalculatorImplXml) proxyFactory.getProxy();
 		System.out.println(proxy.add(10, 2));
-		System.out.println(proxy.sub(6, 2));
+		System.out.println(proxy.sub(10, 2));
 	}
 
 }
