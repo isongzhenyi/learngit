@@ -39,7 +39,6 @@ public class Apptest
 		ProxyFactory proxyFactory = new ProxyFactory();
 
 		proxyFactory.setTarget(target);
-		// 一个目标对应两个切面
 		proxyFactory.addAdvice(aspectXml);
 		proxyFactory.addAdvice(aspectXml2);
 		
