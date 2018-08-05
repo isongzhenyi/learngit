@@ -35,13 +35,17 @@ public class Apptest
 	{
 		ArithmeticCalculatorImplXml target = new ArithmeticCalculatorImplXml();
 		LogAspectXml aspectXml = new LogAspectXml();
+		LogAspectXml aspectXml2 = new LogAspectXml();
 		ProxyFactory proxyFactory = new ProxyFactory();
 
 		proxyFactory.setTarget(target);
+		// 一个目标对应两个切面
 		proxyFactory.addAdvice(aspectXml);
-
+		proxyFactory.addAdvice(aspectXml2);
+		
 		ArithmeticCalculatorImplXml proxy = (ArithmeticCalculatorImplXml) proxyFactory.getProxy();
 		System.out.println(proxy.add(10, 2));
+		System.out.println(proxy.sub(6, 2));
 	}
 
 }

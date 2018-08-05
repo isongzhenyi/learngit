@@ -8,7 +8,7 @@ public class ArithmeticCalculatorImplXml implements ArithmeticCalculator
 		return a+b;
 	}
 
-	public int sub(int a, int b)
+	public final int sub(int a, int b)
 	{
 		// TODO Auto-generated method stub
 		return a - b ;
