@@ -30,6 +30,7 @@ public class Apptest
 	}
 
 	
+	// 非注解、非xml形式实现
 	@Test
 	public void testProxyFactory()
 	{
