@@ -39,4 +39,5 @@
 <fullyQualifiedTypeName name="com.honliv.hp.it.aop.ArithmeticCalculatorImplXml"/>
 <fullyQualifiedTypeName name="com.honliv.hp.it.aop.LogAspectXml"/>
 <fullyQualifiedTypeName name="org.springframework.aop.framework.ProxyFactory"/>
+<fullyQualifiedTypeName name="com.honliv.hp.it.aop.NeedTest"/>
 </qualifiedTypeNameHistroy>
