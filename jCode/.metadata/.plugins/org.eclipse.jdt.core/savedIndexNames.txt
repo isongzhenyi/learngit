@@ -50,13 +50,11 @@ INDEX VERSION 1.131+E:\code\jCode\.metadata\.plugins\org.eclipse.jdt.core
 1970741656.index
 1854364809.index
 1448776087.index
-1320664381.index
 3190458669.index
 1923175087.index
 1165057926.index
 1761084234.index
 1561006778.index
-3780816088.index
 2508595441.index
 1640771042.index
 2198158572.index
@@ -100,7 +98,6 @@ INDEX VERSION 1.131+E:\code\jCode\.metadata\.plugins\org.eclipse.jdt.core
 2205100705.index
 27585588.index
 1657239463.index
-3040981853.index
 589767773.index
 2231970060.index
 465150245.index

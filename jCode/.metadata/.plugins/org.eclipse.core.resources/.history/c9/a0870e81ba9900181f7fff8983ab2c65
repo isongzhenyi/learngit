@@ -10,6 +10,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Apptest
 {
+
 	@Test
 	public void test()
 	{
@@ -30,6 +31,7 @@ public class Apptest
 		context.close();
 	}
 
+	
 	// 非注解、非xml形式实现
 	@Test
 	public void testProxyFactory()
@@ -52,7 +54,7 @@ public class Apptest
 	@Test
 	public void tool()
 	{
-		Class<ForumService> clazz = ForumService.class;
+		Class clazz = ForumService.class;
 		Method[] methods = clazz.getDeclaredMethods();
 		
 		System.out.println(methods.length);
@@ -74,4 +76,6 @@ public class Apptest
 			}
 		}
 	}
+	
+
 }
