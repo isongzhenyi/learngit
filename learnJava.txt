@@ -1,3 +1,8 @@
+-- Java Warning:Build path specifies execution environment J2SE-1.5.
+打开项目下拉菜单 --> pom.xml --> Overview --> Properties --> Create... --> Add property (Name: "maven.compiler.target" Value: "1.8") --> Create... --> Add property (Name: "maven.compiler.source" Value: "1.8") --> 'Ctrl+S'键保存 
+右键项目 --> Maven --> Update Project...
+备注:"1.8"为Java JDK 版本 ,可通过 Window --> Preferences --> Java --> Compiler --> Compiler Compliance Settings 查看.
+
 -- 2018年8月3日
 在对spring实例化操作时，ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml")，
 会报警告 Resource leak: 'context' is never closed；对这种警告的处理方法总结如下：
