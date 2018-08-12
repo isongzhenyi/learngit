@@ -1,5 +1,7 @@
 package com.honliv.hp.it.aop;
 
+import java.lang.reflect.Method;
+
 import org.junit.Test;
 import org.springframework.aop.framework.ProxyFactory;
 import org.springframework.context.ApplicationContext;
@@ -8,7 +10,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Apptest
 {
-
 	@Test
 	public void test()
 	{
@@ -29,7 +30,6 @@ public class Apptest
 		context.close();
 	}
 
-	
 	// 非注解、非xml形式实现
 	@Test
 	public void testProxyFactory()
@@ -48,5 +48,30 @@ public class Apptest
 		System.out.println(proxy.add(10, 2));
 		System.out.println(proxy.sub(6, 2));
 	}
-
+	
+	@Test
+	public void tool()
+	{
+		Class<ForumService> clazz = ForumService.class;
+		Method[] methods = clazz.getDeclaredMethods();
+		
+		System.out.println(methods.length);
+		
+		for (Method method : methods)
+		{
+			NeedTest nTest = method.getAnnotation(NeedTest.class);
+			
+			if (nTest!=null)
+			{
+				if (nTest.value())
+				{
+					System.out.println(method.getName()+"() 需要测试");
+				}
+				else
+				{
+					System.out.println(method.getName()+"() 不需要测试");
+				}
+			}
+		}
+	}
 }

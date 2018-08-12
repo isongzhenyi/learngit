@@ -39,5 +39,9 @@
 <fullyQualifiedTypeName name="com.honliv.hp.it.aop.ArithmeticCalculatorImplXml"/>
 <fullyQualifiedTypeName name="com.honliv.hp.it.aop.LogAspectXml"/>
 <fullyQualifiedTypeName name="org.springframework.aop.framework.ProxyFactory"/>
+<fullyQualifiedTypeName name="java.lang.Class"/>
+<fullyQualifiedTypeName name="com.honliv.hp.it.aop.ForumService"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Method"/>
 <fullyQualifiedTypeName name="com.honliv.hp.it.aop.NeedTest"/>
+<fullyQualifiedTypeName name="java.time.Month"/>
 </qualifiedTypeNameHistroy>

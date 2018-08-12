@@ -27,7 +27,7 @@ public class AccountServerCglibProxy implements MethodInterceptor
 		return (AccountServer) enhancer.create();
 	}
 
-	@Override
+	
 	// 都会通过该方法来调用目标方法
 	// All generated proxied methods call this method instead of the original method
 	public Object intercept(Object obj, Method method, Object[] args, MethodProxy proxy) throws Throwable
