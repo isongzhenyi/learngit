@@ -1,3 +1,7 @@
+2018年8月12日
+git 放弃本地修改：http://www.cnblogs.com/qufanblog/p/7606105.html
+git rebase --abort 来取消目前的进程
+
 2018年7月31日
  git pull --rebase
 
