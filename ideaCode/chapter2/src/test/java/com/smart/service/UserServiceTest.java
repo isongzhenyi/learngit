@@ -1,6 +1,8 @@
 package com.smart.service;
 
 import java.util.Date;
+
+import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.testng.AbstractTransactionalTestNGSpringContextTests;
 import org.testng.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,11 +13,19 @@ import static org.testng.Assert.*;
 @ContextConfiguration("classpath*:/smart-context.xml")
 public class UserServiceTest extends AbstractTransactionalTestNGSpringContextTests {
 
-	@Autowired
-    private UserService userService;
+   @Autowired
+	private UserService userService;
+//	public UserService getUserService() {
+//		return userService;
+//	}
+//
+//	public void setUserService(UserService userService) {
+//		this.userService = userService;
+//	}
 
 	@Test
-	public void testHasMatchUser() {
+	@Rollback(false)
+	void testHasMatchUser() {
 		boolean b1 = userService.hasMatchUser("admin", "123456");
 		boolean b2 = userService.hasMatchUser("admin", "1111");
 		assertTrue(b1);
@@ -33,6 +43,7 @@ public class UserServiceTest extends AbstractTransactionalTestNGSpringContextTes
 
 
 	@Test
+	@Rollback(false)
 	public void testAddLoginLog() {
 		User user = userService.findUserByUserName("admin");
 		user.setUserId(1);
