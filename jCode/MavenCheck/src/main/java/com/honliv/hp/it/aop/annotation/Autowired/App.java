@@ -5,7 +5,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class App
 {
-
 	@Test
 	public void test()
 	{
@@ -15,5 +14,4 @@ public class App
 		te.spellCheck();
 		context.close();
 	}
-
 }
