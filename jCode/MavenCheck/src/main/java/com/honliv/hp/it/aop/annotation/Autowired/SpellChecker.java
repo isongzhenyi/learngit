@@ -2,7 +2,8 @@ package com.honliv.hp.it.aop.annotation.Autowired;
 
 public class SpellChecker
 {
-	public SpellChecker() {
+	public SpellChecker()
+	{
 		System.out.println("Inside SpellChecker constructor.");
 	}
 
