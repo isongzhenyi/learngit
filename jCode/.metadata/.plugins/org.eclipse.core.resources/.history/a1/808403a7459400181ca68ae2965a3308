@@ -1,7 +1,0 @@
-package com.honliv.hp.it.template;
-
-public class AppTest
-{
-	CustomerShopping customerShopping =  new CustomerShopping();
-	customerShopping.shopping();
-}
