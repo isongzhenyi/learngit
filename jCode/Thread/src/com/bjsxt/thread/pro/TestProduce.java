@@ -1,6 +1,9 @@
 package com.bjsxt.thread.pro;
-public class TestProduce {
-	public static void main(String[] args) {
+
+public class TestProduce
+{
+	public static void main(String[] args)
+	{
 		SyncStack sStack = new SyncStack();
 		Shengchan sc = new Shengchan(sStack);
 		Xiaofei xf = new Xiaofei(sStack);
@@ -9,36 +12,51 @@ public class TestProduce {
 	}
 }
 
-class Mantou {
+class Mantou
+{
 	int id;
-	Mantou(int id){
-		this.id=id;
+
+	Mantou(int id)
+	{
+		this.id = id;
 	}
 }
 
-class SyncStack{
-	int index=0;
+class SyncStack
+{
+	int index = 0;
 	Mantou[] ms = new Mantou[10];
-	
-	public synchronized void push(Mantou m){
-		while(index==ms.length){
-			try {
-				this.wait(); 
-				//waitºó£¬Ïß³Ì»á½«³ÖÓÐµÄËøÊÍ·Å¡£sleepÊÇ¼´Ê¹Ë¯×ÅÒ²³ÖÓÐ»¥³âËø¡£
-			} catch (InterruptedException e) {
+
+	public synchronized void push(Mantou m)
+	{
+		while (index == ms.length)
+		{
+			try
+			{
+				this.wait();
+				// waitï¿½ï¿½ï¿½ß³Ì»á½«ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½Í·Å¡ï¿½sleepï¿½Ç¼ï¿½Ê¹Ë¯ï¿½ï¿½Ò²ï¿½ï¿½ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			}
+			catch (InterruptedException e)
+			{
 				e.printStackTrace();
 			}
 		}
-		this.notify(); //»½ÐÑÔÚµ±Ç°¶ÔÏóµÈ´ý³ØÖÐµÈ´ýµÄµÚÒ»¸öÏß³Ì¡£notifyAll½ÐÐÑËùÓÐÔÚµ±Ç°¶ÔÏóµÈ´ý³ØÖÐµÈ´ýµÄËùÓÐÏß³Ì¡£
-		//Èç¹û²»»½ÐÑµÄ»°¡£ÒÔºóÕâÁ½¸öÏß³Ì¶¼»á½øÈëµÈ´ýÏß³Ì£¬Ã»ÓÐÈË»½ÐÑ¡£
-		ms[index]=m;
+		this.notify(); // ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½Ç°ï¿½ï¿½ï¿½ï¿½È´ï¿½ï¿½ï¿½ï¿½ÐµÈ´ï¿½ï¿½Äµï¿½Ò»ï¿½ï¿½ï¿½ß³Ì¡ï¿½notifyAllï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½Ç°ï¿½ï¿½ï¿½ï¿½È´ï¿½ï¿½ï¿½ï¿½ÐµÈ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß³Ì¡ï¿½
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÑµÄ»ï¿½ï¿½ï¿½ï¿½Ôºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß³Ì¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È´ï¿½ï¿½ß³Ì£ï¿½Ã»ï¿½ï¿½ï¿½Ë»ï¿½ï¿½Ñ¡ï¿½
+		ms[index] = m;
 		index++;
 	}
-	public synchronized Mantou pop(){
-		while(index==0){
-			try {
+
+	public synchronized Mantou pop()
+	{
+		while (index == 0)
+		{
+			try
+			{
 				this.wait();
-			} catch (InterruptedException e) {
+			}
+			catch (InterruptedException e)
+			{
 				e.printStackTrace();
 			}
 		}
@@ -48,34 +66,45 @@ class SyncStack{
 	}
 }
 
-class Shengchan extends Thread{
+class Shengchan extends Thread
+{
 	SyncStack ss = null;
-	
-	public Shengchan(SyncStack ss) {
-		this.ss=ss;
+
+	public Shengchan(SyncStack ss)
+	{
+		this.ss = ss;
 	}
+
 	@Override
-	public void run() {
-		for (int i = 0; i < 20; i++) {
-			System.out.println("ÔìÂøÍ·£º"+i);
+	public void run()
+	{
+		for (int i = 0; i < 20; i++)
+		{
+			System.out.println("ï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½" + i);
 			Mantou m = new Mantou(i);
 			ss.push(m);
 		}
 	}
 }
 
-class Xiaofei extends Thread{
+class Xiaofei extends Thread
+{
 	SyncStack ss = null;
-	
-	public Xiaofei(SyncStack ss) {
-		this.ss=ss;
+
+	public Xiaofei(SyncStack ss)
+	{
+		this.ss = ss;
 	}
+
 	@Override
-	public void run() {
-		for (int i = 0; i < 20; i++) {
+	public void run()
+	{
+		for (int i = 0; i < 20; i++)
+		{
+			@SuppressWarnings("unused")
 			Mantou m = ss.pop();
-			System.out.println("³ÔÂøÍ·£º"+i);
-			
+			System.out.println("ï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½" + i);
+
 		}
 	}
 }

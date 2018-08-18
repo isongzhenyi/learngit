@@ -1,65 +1,83 @@
 package com.bjsxt.thread.pro;
+
 /**
- Ò»¸ö³¡¾°,¹²Í¬µÄ×ÊÔ´
-  Éú²úÕßÏû·ÑÕßÄ£Ê½ ÐÅºÅµÆ·¨
- wait() :µÈ´ý£¬ÊÍ·ÅËø   sleep ²»ÊÍ·ÅËø
- notify()/notifyAll():»½ÐÑ
-  Óë synchronized
+ * Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½Ô´ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£Ê½ ï¿½ÅºÅµÆ·ï¿½ wait() :ï¿½È´ï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½ï¿½ sleep ï¿½ï¿½ï¿½Í·ï¿½ï¿½ï¿½
+ * notify()/notifyAll():ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ synchronized
+ * 
  * @author Administrator
  *
  */
-public class Movie {
-	private String pic ;
-	//ÐÅºÅµÆ
-	//flag -->T Éú²úÉú²ú£¬Ïû·ÑÕßµÈ´ý £¬Éú²úÍê³ÉºóÍ¨ÖªÏû·Ñ
-	//flag -->F Ïû·ÑÕßÏû·Ñ Éú²úÕßµÈ´ý, Ïû·ÑÍê³ÉºóÍ¨ÖªÉú²ú
-	private boolean flag =true;
+public class Movie
+{
+	private String pic;
+	// ï¿½ÅºÅµï¿½
+	// flag -->T ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ßµÈ´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Éºï¿½Í¨Öªï¿½ï¿½ï¿½ï¿½
+	// flag -->F ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ßµÈ´ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Éºï¿½Í¨Öªï¿½ï¿½ï¿½ï¿½
+	private boolean flag = true;
+
 	/**
-	 * ²¥·Å
+	 * ï¿½ï¿½ï¿½ï¿½
+	 * 
 	 * @param pic
 	 */
-	public synchronized void play(String pic){
-		if(!flag){ //Éú²úÕßµÈ´ý
-			try {
+	public synchronized void play(String pic)
+	{
+		if (!flag)
+		{ // ï¿½ï¿½ï¿½ï¿½ï¿½ßµÈ´ï¿½
+			try
+			{
 				this.wait();
-			} catch (InterruptedException e) {
+			}
+			catch (InterruptedException e)
+			{
 				e.printStackTrace();
 			}
 		}
-		//¿ªÊ¼Éú²ú
-		try {
+		// ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+		try
+		{
 			Thread.sleep(500);
-		} catch (InterruptedException e) {
+		}
+		catch (InterruptedException e)
+		{
 			e.printStackTrace();
 		}
-		System.out.println("Éú²úÁË:"+pic);
-		//Éú²úÍê±Ï		
-		this.pic =pic;
-		//Í¨ÖªÏû·Ñ
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:" + pic);
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		this.pic = pic;
+		// Í¨Öªï¿½ï¿½ï¿½ï¿½
 		this.notify();
-		//Éú²úÕßÍ£ÏÂ
-		this.flag =false;
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½ï¿½
+		this.flag = false;
 	}
-	
-	public synchronized void watch(){
-		if(flag){ //Ïû·ÑÕßµÈ´ý
-			try {
+
+	public synchronized void watch()
+	{
+		if (flag)
+		{ // ï¿½ï¿½ï¿½ï¿½ï¿½ßµÈ´ï¿½
+			try
+			{
 				this.wait();
-			} catch (InterruptedException e) {
+			}
+			catch (InterruptedException e)
+			{
 				e.printStackTrace();
 			}
 		}
-		//¿ªÊ¼Ïû·Ñ
-		try {
+		// ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+		try
+		{
 			Thread.sleep(200);
-		} catch (InterruptedException e) {
+		}
+		catch (InterruptedException e)
+		{
 			e.printStackTrace();
 		}
-		System.out.println("Ïû·ÑÁË"+pic);
-		//Ïû·ÑÍê±Ï
-		//Í¨ÖªÉú²ú
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" + pic);
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		// Í¨Öªï¿½ï¿½ï¿½ï¿½
 		this.notifyAll();
-		//Ïû·ÑÍ£Ö¹
-		this.flag=true;
+		// ï¿½ï¿½ï¿½ï¿½Í£Ö¹
+		this.flag = true;
 	}
 }

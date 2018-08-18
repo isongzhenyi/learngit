@@ -6,13 +6,12 @@ public class RabbitApp {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		//´´½¨×ÓÀà¶ÔÏó
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		Rabbit rab = new Rabbit();
 		Tortoise tor =new Tortoise();
 		
-		
-		//µ÷ÓÃstart ·½·¨
-		//rab.start(); //²»Òªµ÷ÓÃrun·½·¨
+		//ï¿½ï¿½ï¿½ï¿½start ï¿½ï¿½ï¿½ï¿½
+		//rab.start(); //ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½runï¿½ï¿½ï¿½ï¿½
 		rab.run();
 		//tor.start();
 		tor.run();

@@ -5,94 +5,112 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+
 /**
- * Ê¹ÓÃCallable´´½¨Ïß³Ì
+ * Ê¹ï¿½ï¿½Callableï¿½ï¿½ï¿½ï¿½ï¿½ß³ï¿½
+ * 
  * @author Administrator
  *
  */
-public class Call {
-	public static void main(String[] args) throws InterruptedException, ExecutionException {
-		//´´½¨Ïß³Ì
-		ExecutorService  ser=Executors.newFixedThreadPool(2);
-		Race tortoise = new Race("ÀÏ²»ËÀ",1000);
-		Race rabbit = new Race("Ð¡ÍÃ×Ó",500);
-		//»ñÈ¡Öµ
-		Future<Integer> result1 =ser.submit(tortoise) ;
-		Future<Integer> result2 =ser.submit(rabbit) ;
-		
-		Thread.sleep(2000); //2Ãë
-		tortoise.setFlag(false); //Í£Ö¹Ïß³ÌÌåÑ­»·
+public class Call
+{
+	public static void main(String[] args) throws InterruptedException, ExecutionException
+	{
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ß³ï¿½
+		ExecutorService ser = Executors.newFixedThreadPool(2);
+		Race tortoise = new Race("ï¿½Ï²ï¿½ï¿½ï¿½", 1000);
+		Race rabbit = new Race("Ð¡ï¿½ï¿½ï¿½ï¿½", 500);
+		// ï¿½ï¿½È¡Öµ
+		Future<Integer> result1 = ser.submit(tortoise);
+		Future<Integer> result2 = ser.submit(rabbit);
+
+		Thread.sleep(2000); // 2ï¿½ï¿½
+		tortoise.setFlag(false); // Í£Ö¹ï¿½ß³ï¿½ï¿½ï¿½Ñ­ï¿½ï¿½
 		rabbit.setFlag(false);
-		
-		int num1 =result1.get();
-		int num2 =result2.get();
-		System.out.println("ÎÚ¹êÅÜÁË-->"+num1+"²½");
-		System.out.println("Ð¡ÍÃ×ÓÅÜÁË-->"+num2+"²½");
-		//Í£Ö¹·þÎñ 
+
+		int num1 = result1.get();
+		int num2 = result2.get();
+		System.out.println("ï¿½Ú¹ï¿½ï¿½ï¿½ï¿½ï¿½-->" + num1 + "ï¿½ï¿½");
+		System.out.println("Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½-->" + num2 + "ï¿½ï¿½");
+		// Í£Ö¹ï¿½ï¿½ï¿½ï¿½
 		ser.shutdownNow();
 
 	}
 }
 
-class Race implements Callable<Integer>{
-	private String name ; //Ãû³Æ
-	private long time; //ÑÓÊ±Ê±¼ä
-	private boolean flag =true;
-	private int step =0; //²½
-	public Race() {
-	}	
+class Race implements Callable<Integer>
+{
+	private String name; // ï¿½ï¿½ï¿½ï¿½
+	private long time; // ï¿½ï¿½Ê±Ê±ï¿½ï¿½
+	private boolean flag = true;
+	private int step = 0; // ï¿½ï¿½
 
-	public Race(String name) {
+	public Race()
+	{
+	}
+
+	public Race(String name)
+	{
 		super();
 		this.name = name;
 	}
-	public Race(String name,long time) {
+
+	public Race(String name, long time)
+	{
 		super();
 		this.name = name;
-		this.time =time;
+		this.time = time;
 	}
 
 	@Override
-	public Integer call() throws Exception {
-		while(flag){
-			Thread.sleep(time); //ÑÓÊ±
+	public Integer call() throws Exception
+	{
+		while (flag)
+		{
+			Thread.sleep(time); // ï¿½ï¿½Ê±
 			step++;
 		}
 		return step;
 	}
 
-	public String getName() {
+	public String getName()
+	{
 		return name;
 	}
 
-	public void setName(String name) {
+	public void setName(String name)
+	{
 		this.name = name;
 	}
 
-	
-
-	public long getTime() {
+	public long getTime()
+	{
 		return time;
 	}
 
-	public void setTime(long time) {
+	public void setTime(long time)
+	{
 		this.time = time;
 	}
 
-	public boolean isFlag() {
+	public boolean isFlag()
+	{
 		return flag;
 	}
 
-	public void setFlag(boolean flag) {
+	public void setFlag(boolean flag)
+	{
 		this.flag = flag;
 	}
 
-	public int getStep() {
+	public int getStep()
+	{
 		return step;
 	}
 
-	public void setStep(int step) {
+	public void setStep(int step)
+	{
 		this.step = step;
 	}
-	
+
 }

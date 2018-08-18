@@ -2,7 +2,7 @@ package com.bjsxt.thread.status;
 
 
 /**
- * SleepÄ£Äâ ÍøÂçÑÓÊ±  Ïß³Ì²»°²È«µÄÀà
+ * SleepÄ£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±  ï¿½ß³Ì²ï¿½ï¿½ï¿½È«ï¿½ï¿½ï¿½ï¿½
  * @author Administrator
  *
  */
@@ -12,14 +12,15 @@ public class SleepDemo02 {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		//ÕæÊµ½ÇÉ«
+		//ï¿½ï¿½Êµï¿½ï¿½É«
 		Web12306 web= new Web12306();
+		@SuppressWarnings("unused")
 		Web12306 web2 = new Web12306();
-		//´úÀí
-		Thread t1 =new Thread(web,"Â·ÈË¼×");
-		Thread t2 =new Thread(web,"»ÆÅ£ÒÑ");
-		Thread t3 =new Thread(web,"¹¥³ÇÊ¦");
-		//Æô¶¯Ïß³Ì
+		//ï¿½ï¿½ï¿½ï¿½
+		Thread t1 =new Thread(web,"Â·ï¿½Ë¼ï¿½");
+		Thread t2 =new Thread(web,"ï¿½ï¿½Å£ï¿½ï¿½");
+		Thread t3 =new Thread(web,"ï¿½ï¿½ï¿½ï¿½Ê¦");
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ß³ï¿½
 		t1.start();
 		t2.start();
 		t3.start();
@@ -34,14 +35,14 @@ class Web12306 implements Runnable {
 	public void run() {
 		while(true){
 			if(num<=0){
-				break; //Ìø³öÑ­»·
+				break; //ï¿½ï¿½ï¿½ï¿½Ñ­ï¿½ï¿½
 			}
 			try {
 				Thread.sleep(500);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			System.out.println(Thread.currentThread().getName()+"ÇÀµ½ÁË"+num--);
+			System.out.println(Thread.currentThread().getName()+"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"+num--);
 		}
 	}
 	
