@@ -1,15 +1,24 @@
 package com.bjsxt.thread.pro;
 
-public class App {
-	public static void main(String[] args) {
-		//¹²Í¬µÄ×ÊÔ´
+public class App
+{
+	public static void main(String[] args)
+	{
+		// å…±åŒçš„èµ„æº
 		Movie m = new Movie();
-		
-		//¶àÏß³Ì
+
+		// å¤šçº¿ç¨‹
+
 		Player p = new Player(m);
 		Watcher w = new Watcher(m);
-		
-		new Thread(p).start();		
+
+		new Thread(p).start();
 		new Thread(w).start();
+//		Watcher w = new Watcher(m);
+//		Player p = new Player(m);
+//
+//		new Thread(w).start();
+//		new Thread(p).start();
+
 	}
 }

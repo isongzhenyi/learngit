@@ -1,83 +1,87 @@
 package com.bjsxt.thread.pro;
 
 /**
- * һ������,��ͬ����Դ ������������ģʽ �źŵƷ� wait() :�ȴ����ͷ��� sleep ���ͷ���
- * notify()/notifyAll():���� �� synchronized
+ * 一个场景,共同的资源 生产者消费者模式 信号灯法 wait() :等待，释放锁 sleep 不释放锁 notify()/notifyAll():唤醒 与
+ * synchronized *
  * 
  * @author Administrator
  *
  */
 public class Movie
 {
-	private String pic;
-	// �źŵ�
-	// flag -->T ���������������ߵȴ� ��������ɺ�֪ͨ����
-	// flag -->F ���������� �����ߵȴ�, ������ɺ�֪ͨ����
-	private boolean flag = true;
+	private String	pic;
+	// 信号灯
+	// flag -->T 生产生产，消费者等待 ，生产完成后通知消费
+	// flag -->F 消费者消费 生产者等待, 消费完成后通知生产
+    //wait() 在其他线程调用此对象的 notify() 方法或 notifyAll() 方法前，当前线程等待。
+    //notifyAll()  唤醒在此对象监视器上等待的所有线程
+	private boolean	flag	= true;
 
 	/**
-	 * ����
+	 * 播放
 	 * 
 	 * @param pic
 	 */
 	public synchronized void play(String pic)
 	{
 		if (!flag)
-		{ // �����ߵȴ�
+		{ // 生产者等待
 			try
 			{
 				this.wait();
-			}
-			catch (InterruptedException e)
+				System.out.println("play 生产者等待……");
+			} catch (InterruptedException e)
 			{
 				e.printStackTrace();
 			}
 		}
-		// ��ʼ����
+		// 开始生产
 		try
 		{
-			Thread.sleep(500);
-		}
-		catch (InterruptedException e)
+			System.out.println("play 生产者开始生产……");
+			Thread.sleep(500);			
+		} catch (InterruptedException e)
 		{
 			e.printStackTrace();
 		}
-		System.out.println("������:" + pic);
-		// �������
+		System.out.println("生产了:" + pic);
+		// 生产完毕
 		this.pic = pic;
-		// ֪ͨ����
+		// 通知消费
 		this.notify();
-		// ������ͣ��
+		// 生产者停下
+		System.out.println("生产者停下:" + pic);
 		this.flag = false;
 	}
 
 	public synchronized void watch()
 	{
 		if (flag)
-		{ // �����ߵȴ�
+		{ // 消费者等待
 			try
 			{
 				this.wait();
-			}
-			catch (InterruptedException e)
+				System.out.println("w消费者等待……");
+			} catch (InterruptedException e)
 			{
 				e.printStackTrace();
 			}
 		}
-		// ��ʼ����
+		// 消费开始
 		try
 		{
+			System.out.println("watch 消费者消费开始……");
 			Thread.sleep(200);
-		}
-		catch (InterruptedException e)
+			
+		} catch (InterruptedException e)
 		{
 			e.printStackTrace();
 		}
-		System.out.println("������" + pic);
-		// �������
-		// ֪ͨ����
+		System.out.println("消费了" + pic);
+		// 消费完毕
+		// 通知生产
 		this.notifyAll();
-		// ����ֹͣ
+		// 消费停止
 		this.flag = true;
 	}
 }

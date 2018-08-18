@@ -1,24 +1,32 @@
 package com.bjsxt.thread.pro;
+
 /**
- * Éú²úÕß
+ * ç”Ÿäº§è€…
+ * 
  * @author Administrator
  *
  */
-public class Player implements Runnable {
-	private Movie m ;
-	
-	public Player(Movie m) {
+public class Player implements Runnable
+{
+	private Movie m;
+
+	public Player(Movie m)
+	{
 		super();
 		this.m = m;
 	}
 
 	@Override
-	public void run() {
-		for(int i=0;i<20;i++){
-			if(0==i%2){
-				m.play("×óÇàÁú");
-			}else{
-				m.play("ÓÒ°×»¢");
+	public void run()
+	{
+		for (int i = 0; i < 20; i++)
+		{
+			if (0 == i % 2)
+			{
+				m.play("å·¦é’é¾™");
+			} else
+			{
+				m.play("å³ç™½è™Ž");
 			}
 		}
 	}

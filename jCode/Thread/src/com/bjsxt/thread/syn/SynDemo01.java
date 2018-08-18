@@ -1,155 +1,170 @@
 package com.bjsxt.thread.syn;
 
-
-public class SynDemo01 {
+public class SynDemo01
+{
 
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) {
-		//ÕæÊµ½ÇÉ«
-		Web12306 web= new Web12306();
-		//´úÀí
-		Thread t1 =new Thread(web,"Â·ÈË¼×");
-		Thread t2 =new Thread(web,"»ÆÅ£ÒÑ");
-		Thread t3 =new Thread(web,"¹¥³ÇÊ¦");
-		//Æô¶¯Ïß³Ì
+	public static void main(String[] args)
+	{
+		// çœŸå®è§’è‰²
+		Web12306 web = new Web12306();
+		// ä»£ç†
+		Thread t1 = new Thread(web, "è·¯äººç”²");
+		Thread t2 = new Thread(web, "é»„ç‰›å·²");
+		Thread t3 = new Thread(web, "æ”»åŸå¸ˆ");
+		// å¯åŠ¨çº¿ç¨‹
 		t1.start();
 		t2.start();
 		t3.start();
-		
-		
-		
-		
 	}
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /**
- * Ïß³Ì°²È«µÄÀà
+ * çº¿ç¨‹å®‰å…¨çš„ç±»
+ * 
  * @author Administrator
  *
  */
-class Web12306 implements Runnable {
-	private int num =10;
-	private boolean flag =true;
+class Web12306 implements Runnable
+{
+	private int		num		= 10;
+	private boolean	flag	= true;
+
 	@Override
-	public void run() {
-		while(flag){
+	public void run()
+	{
+		while (flag)
+		{
 			test5();
 		}
 	}
-	
-	public void test6(){
-	   	
-		if(num<=0){
-			flag=false; //Ìø³öÑ­»·
-			return ;
+
+	public void test6()
+	{
+
+		if (num <= 0)
+		{
+			flag = false; // è·³å‡ºå¾ªç¯
+			return;
 		}
-		 //a  b  c 	
-		synchronized(this){
-			try {
-				Thread.sleep(500); //Ä£Äâ ÑÓÊ±
-			} catch (InterruptedException e) {
+		// a b c
+		synchronized (this)
+		{
+			try
+			{
+				Thread.sleep(500); // æ¨¡æ‹Ÿ å»¶æ—¶
+			} catch (InterruptedException e)
+			{
 				e.printStackTrace();
 			}
-			System.out.println(Thread.currentThread().getName()+"ÇÀµ½ÁË"+num--);
+			System.out.println(Thread.currentThread().getName() + "æŠ¢åˆ°äº†" + num--);
 		}
 	}
-	
-	//Ïß³Ì²»°²È«  Ëø¶¨×ÊÔ´²»ÕıÈ·
-	public void test5(){
-		//a  b  c
-		synchronized((Integer)num){
-			if(num<=0){
-				flag=false; //Ìø³öÑ­»·
-				return ;
+
+	// çº¿ç¨‹ä¸å®‰å…¨ é”å®šèµ„æºä¸æ­£ç¡®
+	public void test5()
+	{
+		// a b c
+		synchronized ((Integer) num)
+		{
+			if (num <= 0)
+			{
+				flag = false; // è·³å‡ºå¾ªç¯
+				return;
 			}
-			try {
-				Thread.sleep(500); //Ä£Äâ ÑÓÊ±
-			} catch (InterruptedException e) {
+			try
+			{
+				Thread.sleep(500); // æ¨¡æ‹Ÿ å»¶æ—¶
+			} catch (InterruptedException e)
+			{
 				e.printStackTrace();
 			}
-			System.out.println(Thread.currentThread().getName()+"ÇÀµ½ÁË"+num--);
+			System.out.println(Thread.currentThread().getName() + "æŠ¢åˆ°äº†" + num--);
 		}
 	}
-	
-	
-	
-	//Ëø¶¨·¶Î§²»ÕıÈ· Ïß³Ì²»°²È«
-	public void test4(){
-		//   c  1
-		synchronized(this){
-			//b
-			if(num<=0){
-				flag=false; //Ìø³öÑ­»·
-				return ;
+
+	// é”å®šèŒƒå›´ä¸æ­£ç¡® çº¿ç¨‹ä¸å®‰å…¨
+	public void test4()
+	{
+		// c 1
+		synchronized (this)
+		{
+			// b
+			if (num <= 0)
+			{
+				flag = false; // è·³å‡ºå¾ªç¯
+				return;
 			}
 		}
 		// b
-		try {
-			Thread.sleep(500); //Ä£Äâ ÑÓÊ±
-		} catch (InterruptedException e) {
+		try
+		{
+			Thread.sleep(500); // æ¨¡æ‹Ÿ å»¶æ—¶
+		} catch (InterruptedException e)
+		{
 			e.printStackTrace();
 		}
-		System.out.println(Thread.currentThread().getName()+"ÇÀµ½ÁË"+num--);
-	}//a -->1
-	
-	
-	
-	//Ïß³Ì°²È«  Ëø¶¨ÕıÈ·
-	public void test3(){
-		//a  b  c
-		synchronized(this){
-			if(num<=0){
-				flag=false; //Ìø³öÑ­»·
-				return ;
+		System.out.println(Thread.currentThread().getName() + "æŠ¢åˆ°äº†" + num--);
+	}// a -->1
+
+	// çº¿ç¨‹å®‰å…¨ é”å®šæ­£ç¡®
+	public void test3()
+	{
+		// a b c
+		synchronized (this)
+		{
+			if (num <= 0)
+			{
+				flag = false; // è·³å‡ºå¾ªç¯
+				return;
 			}
-			try {
-				Thread.sleep(500); //Ä£Äâ ÑÓÊ±
-			} catch (InterruptedException e) {
+			try
+			{
+				Thread.sleep(500); // æ¨¡æ‹Ÿ å»¶æ—¶
+			} catch (InterruptedException e)
+			{
 				e.printStackTrace();
 			}
-			System.out.println(Thread.currentThread().getName()+"ÇÀµ½ÁË"+num--);
+			System.out.println(Thread.currentThread().getName() + "æŠ¢åˆ°äº†" + num--);
 		}
 	}
-	//Ïß³Ì°²È«  Ëø¶¨ÕıÈ·
-	public synchronized void test2(){
-		if(num<=0){
-			flag=false; //Ìø³öÑ­»·
-			return ;
+
+	// çº¿ç¨‹å®‰å…¨ é”å®šæ­£ç¡®
+	public synchronized void test2()
+	{
+		if (num <= 0)
+		{
+			flag = false; // è·³å‡ºå¾ªç¯
+			return;
 		}
-		try {
-			Thread.sleep(500); //Ä£Äâ ÑÓÊ±
-		} catch (InterruptedException e) {
+		try
+		{
+			Thread.sleep(500); // æ¨¡æ‹Ÿ å»¶æ—¶
+		} catch (InterruptedException e)
+		{
 			e.printStackTrace();
 		}
-		System.out.println(Thread.currentThread().getName()+"ÇÀµ½ÁË"+num--);
+		System.out.println(Thread.currentThread().getName() + "æŠ¢åˆ°äº†" + num--);
 	}
-	
-	
-	//Ïß³Ì²»°²È«
-	public void test1(){
-		if(num<=0){
-			flag=false; //Ìø³öÑ­»·
-			return ;
+
+	// çº¿ç¨‹ä¸å®‰å…¨
+	public void test1()
+	{
+		if (num <= 0)
+		{
+			flag = false; // è·³å‡ºå¾ªç¯
+			return;
 		}
-		try {
+		try
+		{
 			Thread.sleep(500);
-		} catch (InterruptedException e) {
+		} catch (InterruptedException e)
+		{
 			e.printStackTrace();
 		}
-		System.out.println(Thread.currentThread().getName()+"ÇÀµ½ÁË"+num--);
+		System.out.println(Thread.currentThread().getName() + "æŠ¢åˆ°äº†" + num--);
 	}
 }

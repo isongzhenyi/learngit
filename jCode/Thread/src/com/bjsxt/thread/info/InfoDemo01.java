@@ -1,33 +1,33 @@
 package com.bjsxt.thread.info;
+
 /**
  *
-  Thread.currentThread()	 :µ±Ç°Ïß³Ì
-  setName():ÉèÖÃÃû³Æ
-  getName():»ñÈ¡Ãû³Æ
-  isAlive():ÅĞ¶Ï×´Ì¬
-
+ * Thread.currentThread() :å½“å‰çº¿ç¨‹ setName():è®¾ç½®åç§° getName():è·å–åç§° isAlive():åˆ¤æ–­çŠ¶æ€
+ * 
  * @author Administrator
  *
  */
-public class InfoDemo01 {
+public class InfoDemo01
+{
 
 	/**
 	 * @param args
-	 * @throws InterruptedException 
+	 * @throws InterruptedException
 	 */
-	public static void main(String[] args) throws InterruptedException {
-		MyThread it =new MyThread();
-		Thread proxy =new Thread(it,"°¤Ìß");
+	public static void main(String[] args) throws InterruptedException
+	{
+		MyThread it = new MyThread();
+		Thread proxy = new Thread(it, "æŒ¨è¸¢");
 		proxy.setName("test");
 		System.out.println(proxy.getName());
-		System.out.println(Thread.currentThread().getName()); //main
-		
+		System.out.println(Thread.currentThread().getName()); // main
+
 		proxy.start();
-		System.out.println("Æô¶¯ºóµÄ×´Ì¬:"+proxy.isAlive());
+		System.out.println("å¯åŠ¨åçš„çŠ¶æ€:" + proxy.isAlive());
 		Thread.sleep(200);
 		it.stop();
 		Thread.sleep(100);
-		System.out.println("Í£Ö¹ºóµÄ×´Ì¬:"+proxy.isAlive());
+		System.out.println("åœæ­¢åçš„çŠ¶æ€:" + proxy.isAlive());
 	}
 
 }

@@ -1,8 +1,8 @@
 package com.bjsxt.thread.info;
 /**
- * ÓÅÏÈ¼¶:¸ÅÂÊ£¬²»ÊÇ¾ø¶ÔµÄÏÈºóË³Ğò
+ * ä¼˜å…ˆçº§:æ¦‚ç‡ï¼Œä¸æ˜¯ç»å¯¹çš„å…ˆåé¡ºåº
    MAX_PRIORITY  10
-   NORM_PRIORITY 5 (Ä¬ÈÏ)
+   NORM_PRIORITY 5 (é»˜è®¤)
    MIN_PRIORITY  1
    
    setPriority()
@@ -18,16 +18,14 @@ public class InfoDemo02 {
 	 */
 	public static void main(String[] args) throws InterruptedException {
 		MyThread it =new MyThread();
-		Thread p1 =new Thread(it,"°¤Ìß1");
+		Thread p1 =new Thread(it,"æŒ¨è¸¢1");
 		MyThread it2 =new MyThread();
-		Thread p2 =new Thread(it2,"°¤Ìß2");
+		Thread p2 =new Thread(it2,"æŒ¨è¸¢2");
 		
-		p1.setPriority(Thread.MIN_PRIORITY); //ÉèÖÃÓÅÏÈ¼¶
-		p2.setPriority(Thread.MAX_PRIORITY);//ÉèÖÃÓÅÏÈ¼¶
+		p1.setPriority(Thread.MIN_PRIORITY); //è®¾ç½®ä¼˜å…ˆçº§
+		p2.setPriority(Thread.MAX_PRIORITY);//è®¾ç½®ä¼˜å…ˆçº§
 		p1.start();
-		p2.start();
-		
-		
+		p2.start();			
 		
 		Thread.sleep(100);
 		it.stop();
