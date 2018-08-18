@@ -1,20 +1,23 @@
 package com.bjsxt.thread.create;
 
-public class ProgrammerApp {
+public class ProgrammerApp
+{
 
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) {
-		 //1)¡¢´´½¨ÕæÊµ½ÇÉ«
-		Programmer pro =new Programmer();		
-		  //2)¡¢´´½¨´úÀí½ÇÉ« +ÕæÊµ½ÇÉ«ÒýÓÃ
-		Thread proxy =new Thread(pro);
-		  //3)¡¢µ÷ÓÃ .start() Æô¶¯Ïß³Ì
+	public static void main(String[] args)
+	{
+		// 1)ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½É«
+		Programmer pro = new Programmer();
+		// 2)ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É« +ï¿½ï¿½Êµï¿½ï¿½É«ï¿½ï¿½ï¿½ï¿½
+		Thread proxy = new Thread(pro);
+		// 3)ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ .start() ï¿½ï¿½ï¿½ï¿½ï¿½ß³ï¿½
 		proxy.start();
-		
-		for(int i=0;i<1000;i++){
-			System.out.println("Ò»±ßÁÄqq....");
+
+		for (int i = 0; i < 1000; i++)
+		{
+			System.out.println("Ò»ï¿½ï¿½ï¿½ï¿½qq....");
 		}
 	}
 

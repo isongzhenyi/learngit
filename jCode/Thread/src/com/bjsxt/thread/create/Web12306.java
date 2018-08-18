@@ -1,30 +1,37 @@
 package com.bjsxt.thread.create;
+
 /**
- * ·½±ã¹²Ïí×ÊÔ´
+ * ï¿½ï¿½ï¿½ã¹²ï¿½ï¿½ï¿½ï¿½Ô´
+ * 
  * @author Administrator
  *
  */
-public class Web12306 implements Runnable {
-	private int num =50;
+public class Web12306 implements Runnable
+{
+	private int num = 50;
 
 	@Override
-	public void run() {
-		while(true){
-			if(num<=0){
-				break; //Ìø³öÑ­»·
+	public void run()
+	{
+		while (true)
+		{
+			if (num <= 0)
+			{
+				break; // ï¿½ï¿½ï¿½ï¿½Ñ­ï¿½ï¿½
 			}
-			System.out.println(Thread.currentThread().getName()+"ÇÀµ½ÁË"+num--);
+			System.out.println(Thread.currentThread().getName() + "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" + num--);
 		}
 	}
-	
-	public static void main(String[] args) {
-		//ÕæÊµ½ÇÉ«
+
+	public static void main(String[] args)
+	{
+		// ï¿½ï¿½Êµï¿½ï¿½É«
 		Web12306 web = new Web12306();
-		//´úÀí
-		Thread t1 =new Thread(web,"Â·ÈË¼×");
-		Thread t2 =new Thread(web,"»ÆÅ£ÒÑ");
-		Thread t3 =new Thread(web,"¹¥³ÇÊ¦");
-		//Æô¶¯Ïß³Ì
+		// ï¿½ï¿½ï¿½ï¿½
+		Thread t1 = new Thread(web, "Â·ï¿½Ë¼ï¿½");
+		Thread t2 = new Thread(web, "ï¿½ï¿½Å£ï¿½ï¿½");
+		Thread t3 = new Thread(web, "ï¿½ï¿½ï¿½ï¿½Ê¦");
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ß³ï¿½
 		t1.start();
 		t2.start();
 		t3.start();

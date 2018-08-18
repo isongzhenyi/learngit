@@ -1,36 +1,41 @@
 package com.bjsxt.thread.create;
+
 /**
- * Ä£Äâ¹êÍÃÈüÅÜ
- 1¡¢´´½¨¶àÏß³Ì  ¼Ì³Ğ  Thread  +ÖØĞ´run(Ïß³ÌÌå)
- 2¡¢Ê¹ÓÃÏß³Ì: ´´½¨×ÓÀà¶ÔÏó + ¶ÔÏó.start()  Ïß³ÌÆô¶¯
-     
+ * Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß³ï¿½ ï¿½Ì³ï¿½ Thread +ï¿½ï¿½Ğ´run(ï¿½ß³ï¿½ï¿½ï¿½) 2ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ß³ï¿½: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ +
+ * ï¿½ï¿½ï¿½ï¿½.start() ï¿½ß³ï¿½ï¿½ï¿½ï¿½ï¿½
+ * 
  * 
  * @author Administrator
  *
  */
-public class Rabbit extends Thread {
+public class Rabbit extends Thread
+{
 
 	@Override
-	public void run() {
-		//Ïß³ÌÌå
-		for(int i=0;i<100;i++){
-			System.out.println("ÍÃ×ÓÅÜÁË"+i+"²½");
+	public void run()
+	{
+		// ï¿½ß³ï¿½ï¿½ï¿½
+		for (int i = 0; i < 100; i++)
+		{
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" + i + "ï¿½ï¿½");
 		}
-		
-		
+
 	}
-	
+
 }
-class Tortoise extends Thread {
+
+class Tortoise extends Thread
+{
 
 	@Override
-	public void run() {
-		//Ïß³ÌÌå
-		for(int i=0;i<100;i++){
-			System.out.println("ÎÚ¹êÅÜÁË"+i+"²½");
+	public void run()
+	{
+		// ï¿½ß³ï¿½ï¿½ï¿½
+		for (int i = 0; i < 100; i++)
+		{
+			System.out.println("ï¿½Ú¹ï¿½ï¿½ï¿½ï¿½ï¿½" + i + "ï¿½ï¿½");
 		}
-		
-		
+
 	}
-	
+
 }
