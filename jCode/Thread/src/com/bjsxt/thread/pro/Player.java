@@ -23,10 +23,10 @@ public class Player implements Runnable
 		{
 			if (0 == i % 2)
 			{
-				m.play("左青龙");
+				m.play(i+"左青龙");
 			} else
 			{
-				m.play("右白虎");
+				m.play(i+"右白虎");
 			}
 		}
 	}

@@ -1,11 +1,14 @@
 package com.bjsxt.thread.pro;
 
 /**
- * 一个场景,共同的资源 生产者消费者模式 信号灯法 wait() :等待，释放锁 sleep 不释放锁 notify()/notifyAll():唤醒 与
- * synchronized *
+ * 一个场景,共同的资源 生产者消费者模式 信号灯法 
+ * wait() :等待，释放锁 sleep 不释放锁
+notify()/notifyAll():唤醒 与 * synchronized *
  * 
  * @author Administrator
  *
+ *java wait() notify() 解释
+ *http://blog.163.com/kellyzly@126/blog/static/12972526420111684155384/
  */
 public class Movie
 {
@@ -28,8 +31,8 @@ public class Movie
 		{ // 生产者等待
 			try
 			{
-				this.wait();
 				System.out.println("play 生产者等待……");
+				this.wait();				
 			} catch (InterruptedException e)
 			{
 				e.printStackTrace();
@@ -39,7 +42,7 @@ public class Movie
 		try
 		{
 			System.out.println("play 生产者开始生产……");
-			Thread.sleep(500);			
+			Thread.sleep(50);			
 		} catch (InterruptedException e)
 		{
 			e.printStackTrace();
@@ -50,7 +53,7 @@ public class Movie
 		// 通知消费
 		this.notify();
 		// 生产者停下
-		System.out.println("生产者停下:" + pic);
+		System.out.println("生产者停下:" + pic+"通知消费");
 		this.flag = false;
 	}
 
@@ -60,8 +63,8 @@ public class Movie
 		{ // 消费者等待
 			try
 			{
-				this.wait();
-				System.out.println("w消费者等待……");
+				System.out.println("消费者等待……");
+				this.wait();				
 			} catch (InterruptedException e)
 			{
 				e.printStackTrace();
@@ -71,17 +74,18 @@ public class Movie
 		try
 		{
 			System.out.println("watch 消费者消费开始……");
-			Thread.sleep(200);
+			Thread.sleep(20);
 			
 		} catch (InterruptedException e)
 		{
 			e.printStackTrace();
 		}
-		System.out.println("消费了" + pic);
+		System.out.println("消费了" + pic+"通知生产");
 		// 消费完毕
 		// 通知生产
 		this.notifyAll();
 		// 消费停止
 		this.flag = true;
+		System.out.println("消费了" + pic+"通知生产flag = true");
 	}
 }
