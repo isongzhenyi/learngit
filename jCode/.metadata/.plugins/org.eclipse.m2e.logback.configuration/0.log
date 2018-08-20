@@ -6441,3 +6441,7 @@ Caused by: java.util.NoSuchElementException: null
 2018-08-20 06:04:39,455 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\code\jCode\MavenCheck\src\main\resources
 2018-08-20 06:04:39,457 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2018-08-20 06:04:39,457 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\code\jCode\MavenCheck\src\test\resources
+2018-08-21 05:50:02,808 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-21 05:50:02,819 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\code\jCode\MavenCheck\src\main\resources
+2018-08-21 05:50:02,821 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-21 05:50:02,821 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\code\jCode\MavenCheck\src\test\resources
