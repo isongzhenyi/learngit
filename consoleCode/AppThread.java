@@ -37,8 +37,9 @@ class Movie {
 		if(!flag) { //生产者等待
 			try {
 				System.out.println(order+"生产者        开始等待……");
+				// 当前线程只有执行wait()时，被唤醒的线程才被真正的执行
 				this.wait();
-				System.out.println(order+"生产者        等待结束，完成释放锁等待之后的执行");				
+				System.out.println(order+"生产者        等待结束，完成释放锁等待之后的执行");
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
@@ -52,7 +53,7 @@ class Movie {
 		System.out.println(order+"生产了:"+pic);
 		//生产完毕
 		this.pic =pic;
-		
+
 		//通知消费
 		this.notify();
 		//生产者停下
@@ -65,28 +66,27 @@ class Movie {
 				//
 				System.out.println(order+"消费者需要等待，等待前");
 				this.wait();
-				//System.out.println("消费者等待后。这段代码会执行吗？");
-				System.out.println(order+"我不需要等待了，已经生产好了，接着消费*************");				 
+				//该输出语句旨在验证wait()后的代码是会被执行的
+				System.out.println(order+"我不需要等待了，已经生产好了，接着消费*************");
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
 		}
 		//开始消费
 		try {
-			Thread.sleep(20
-			);
+			Thread.sleep(20);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 		System.out.println(order+"消费了"+pic);
 		//消费完毕
-		
+
 		//通知生产
 		this.notifyAll();
 		//消费停止
 		this.flag=true;
 		order++;
-		
+
 	}
 }
 
@@ -108,7 +108,7 @@ class Player implements Runnable {
 		for(int i=0; i<10; i++) {
 			int j = i + 1 ;
 			//System.out.println("生产者第 "+j+" 次执行");
-			if(0==i%2) {				
+			if(0==i%2) {
 				m.play("左青龙");
 			} else {
 				m.play("右白虎");
