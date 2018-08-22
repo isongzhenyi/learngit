@@ -28,7 +28,7 @@ class Movie {
 	//flag -->T 生产生产，消费者等待 ，生产完成后通知消费
 	//flag -->F 消费者消费 生产者等待, 消费完成后通知生产
 	private boolean flag =true;
-	private int order = 1;
+	//private int order = 1;
 	/**
 	 * 播放
 	 * @param pic
@@ -36,10 +36,10 @@ class Movie {
 	public synchronized void play(String pic) {
 		if(!flag) { //生产者等待
 			try {
-				System.out.println(order+"生产者        开始等待……");
+				System.out.println("生产者        开始等待……"+pic);
 				// 当前线程只有执行wait()时，被唤醒的线程才被真正的执行
 				this.wait();
-				System.out.println(order+"生产者        等待结束，完成释放锁等待之后的执行");
+				System.out.println("生产者        等待结束，完成释放锁等待之后的执行"+pic);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
@@ -50,7 +50,7 @@ class Movie {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		System.out.println(order+"生产了:"+pic);
+		System.out.println("生产了:"+pic);
 		//生产完毕
 		this.pic =pic;
 
@@ -64,10 +64,10 @@ class Movie {
 		if(flag) { //消费者等待
 			try {
 				//
-				System.out.println(order+"消费者需要等待，等待前");
+				System.out.println("消费者需要等待，等待前"+pic);
 				this.wait();
 				//该输出语句旨在验证wait()后的代码是会被执行的
-				System.out.println(order+"我不需要等待了，已经生产好了，接着消费*************");
+				System.out.println("我不需要等待了，已经生产好了，接着消费*************"+pic);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
@@ -78,15 +78,14 @@ class Movie {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		System.out.println(order+"消费了"+pic);
+		System.out.println("消费了"+pic);
 		//消费完毕
 
 		//通知生产
 		this.notifyAll();
 		//消费停止
 		this.flag=true;
-		order++;
-
+		//order++;
 	}
 }
 
@@ -106,17 +105,17 @@ class Player implements Runnable {
 	@Override
 	public void run() {
 		for(int i=0; i<10; i++) {
-			int j = i + 1 ;
+			//int j = i + 1 ;
 			//System.out.println("生产者第 "+j+" 次执行");
 			if(0==i%2) {
-				m.play("左青龙");
+				m.play("左青龙"+i );
 			} else {
-				m.play("右白虎");
+				m.play("右白虎"+i);
 			}
 		}
 	}
-
 }
+
 class Watcher implements Runnable {
 	private Movie m ;
 
@@ -133,5 +132,4 @@ class Watcher implements Runnable {
 			m.watch();
 		}
 	}
-
 }
