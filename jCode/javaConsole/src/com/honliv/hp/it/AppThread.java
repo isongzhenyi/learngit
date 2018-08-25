@@ -51,7 +51,7 @@ class Movie
 				e.printStackTrace();
 			}
 		}
-		// 开始生产
+		// 开始生产 
 		try
 		{
 			Thread.sleep(50);
@@ -126,14 +126,13 @@ class Player implements Runnable
 	{
 		for (int i = 0; i < 10; i++)
 		{
-			int j = i + 1;
-			// System.out.println("生产者第 "+j+" 次执行");
+		
 			if (0 == i % 2)
 			{
-				m.play("左青龙");
+				m.play("左青龙"+i);
 			} else
 			{
-				m.play("右白虎");
+				m.play("右白虎"+i);
 			}
 		}
 	}
@@ -154,9 +153,7 @@ class Watcher implements Runnable
 	public void run()
 	{
 		for (int i = 0; i < 10; i++)
-		{
-			int j = i + 1;
-			// System.out.println("消费者第 "+j+" 次执行");
+		{			
 			m.watch();
 		}
 	}

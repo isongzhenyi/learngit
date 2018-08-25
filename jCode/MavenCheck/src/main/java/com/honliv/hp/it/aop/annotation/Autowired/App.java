@@ -8,8 +8,7 @@ public class App
 	@Test
 	public void test()
 	{
-		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
-				"com/honliv/hp/it/aop/annotation/Autowired/Beans.xml");
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("com/honliv/hp/it/aop/annotation/Autowired/Beans.xml");
 		TextEditor te = (TextEditor) context.getBean("textEditor");
 		te.spellCheck();
 		context.close();

@@ -44,4 +44,7 @@
 <fullyQualifiedTypeName name="java.lang.reflect.Method"/>
 <fullyQualifiedTypeName name="com.honliv.hp.it.aop.NeedTest"/>
 <fullyQualifiedTypeName name="java.time.Month"/>
+<fullyQualifiedTypeName name="java.nio.channels.AcceptPendingException"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="java.lang.RuntimeException"/>
 </qualifiedTypeNameHistroy>

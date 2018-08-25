@@ -1,3 +1,14 @@
+2018年8月26日
+-- 事务管理 @Transactiona
+https://segmentfault.com/a/1190000014617571 
+https://segmentfault.com/a/1190000014897709
+https://www.cnblogs.com/milton/p/6046699.html
+http://www.cnblogs.com/caoyc/p/5632963.html 
+http://www.cnblogs.com/yepei/p/4716112.html 
+
+-- Java异常
+https://blog.csdn.net/nlznlz/article/details/53271045
+
 -- Java Warning:Build path specifies execution environment J2SE-1.5.
 打开项目下拉菜单 --> pom.xml --> Overview --> Properties --> Create... --> Add property (Name: "maven.compiler.target" Value: "1.8") --> Create... --> Add property (Name: "maven.compiler.source" Value: "1.8") --> 'Ctrl+S'键保存 
 右键项目 --> Maven --> Update Project...
