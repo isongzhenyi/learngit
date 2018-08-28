@@ -1,3 +1,8 @@
+2018年8月28日
+-- 远程覆盖本地
+git fetch origin
+git reset --hard origin/master
+
 2018年8月12日
 git 放弃本地修改：http://www.cnblogs.com/qufanblog/p/7606105.html
 git rebase --abort 来取消目前的进程
