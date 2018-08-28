@@ -109,6 +109,8 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="F:\javaCode\HxtSys"/>
+			<item value="F:\javaCode\HisSys"/>
 			<item value="F:\javaCode\spring"/>
 			<item value="F:\code\jCode\Thread"/>
 		</list>
